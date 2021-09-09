@@ -19,6 +19,75 @@
   color: var(--dark-blue);
 }
 
+/*----------- CLASSI UTILITA' -----------*/
+
+/*ROWS*/
+
+.row-1_6 {
+  width: calc(100% / 6);
+}
+
+.row-2_6 {
+  width: calc(100% / 6 * 2);
+}
+
+.row-4_6 {
+  width: calc(100% / 6 * 4);
+}
+
+/*BUTTONS*/
+
+.btn-normal {
+  font-size: var(--fs-medium);
+  line-height: 60px;
+  padding: 0 30px;
+  border-radius: 30px;
+}
+
+.btn-small {
+  font-size: var(--fs-small);
+  line-height: 33px;
+  padding: 0 15px;
+  border-radius: 20px;
+}
+
+/*BACKGROUNDS*/
+
+.bg-white {
+  background: white;
+  color: var(--dark-blue);
+}
+
+.bg-dark {
+  background: var(--dark-blue);
+  color: white;
+}
+
+.bg-grey {
+  background: var(--grey);
+}
+
+.bg-light-purple {
+  background: var(--light-purple);
+  color: white;
+}
+
+.row.float-left > * {
+  float: left;
+}
+
+.row.float-right > * {
+  float: right;
+}
+
+.float-left::after,
+.float-right::after,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 img {
   width: 100%;
 }
@@ -59,6 +128,10 @@ footer ul > li:first-child {
 p {
   font-size: var(--fs-medium);
   line-height: 32px;
+}
+
+select option {
+  font-size: var(--fs-small);
 }
 
 header .row,
@@ -151,70 +224,37 @@ main .row {
   transform: translateX(-50%);
 }
 
-/*----------- CLASSI UTILITA' -----------*/
+/* >> A: FOOTER >> */
 
-/*ROWS*/
-
-.row-1_6 {
-  width: calc(100% / 6);
+.language img {
+  width: auto;
+  height: 20px;
+  vertical-align: middle;
 }
 
-.row-2_6 {
-  width: calc(100% / 6 * 2);
+footer .container {
+  position: relative;
+  padding: 60px 0;
 }
 
-.row-4_6 {
-  width: calc(100% / 6 * 4);
+footer h3 {
+  margin-top: 0;
+  width: 70%;
 }
 
-/*BUTTONS*/
-
-.btn-normal {
-  font-size: var(--fs-medium);
-  line-height: 60px;
-  padding: 0 30px;
-  border-radius: 30px;
+footer ul {
+  padding: 10px 0 32px;
 }
 
-.btn-small {
-  font-size: var(--fs-small);
-  line-height: 33px;
-  padding: 0 15px;
-  border-radius: 20px;
+footer nav {
+  border-top: 1px solid #3f4a69;
+  padding: 30px 0;
 }
 
-/*BACKGROUNDS*/
-
-.bg-white {
-  background: white;
-  color: var(--dark-blue);
-}
-
-.bg-dark {
-  background: var(--dark-blue);
-  color: white;
-}
-
-.bg-grey {
-  background: var(--grey);
-}
-
-.bg-light-purple {
-  background: var(--light-purple);
-  color: white;
-}
-
-.row.float-left > * {
+.booo {
   float: left;
 }
 
-.row.float-right > * {
+/* footer .row1_6 {
   float: right;
-}
-
-.float-left::after,
-.float-right::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+} */
