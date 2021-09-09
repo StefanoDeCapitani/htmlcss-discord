@@ -1,9 +1,40 @@
+/*===========================================
+SOMMARIO:
+1. RESET
+2. UTILITY CLASSES
+    - ROWS
+    - BUTTONS
+    - BACKGROUNDS
+    - FLOATS
+    - TYPOGRAPHY
+3. TYPOGRAPHY
+    - HEADINGS
+    - OTHER
+4. LAYOUT
+    A: HEADER
+        - NAV
+        - SECTION
+    B: MAIN
+    C: FOOTER
+        - SITEMAP
+        - NAV
+===========================================*/
+
 /*----------------- RESET -----------------*/
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 :root {
@@ -19,9 +50,14 @@
   color: var(--dark-blue);
 }
 
-/*----------- CLASSI UTILITA' -----------*/
+/*----------- 2. UTILITY CLASSES -----------*/
 
 /*ROWS*/
+
+.row {
+  width: 65%;
+  margin: auto;
+}
 
 .row-1_6 {
   width: calc(100% / 6);
@@ -72,11 +108,13 @@
   color: white;
 }
 
-.row.float-left > * {
+/*FLOATS*/
+
+.float-left > * {
   float: left;
 }
 
-.row.float-right > * {
+.float-right > * {
   float: right;
 }
 
@@ -88,18 +126,15 @@
   clear: both;
 }
 
-img {
-  width: 100%;
+/*TYPOGRAPHY*/
+
+.text-center {
+  text-align: center;
 }
 
-ul {
-  list-style: none;
-}
+/*----------- 3. TYPOGRAPHY -----------*/
 
-a {
-  display: inline-block;
-  text-decoration: none;
-}
+/*HEADINGS*/
 
 h1,
 h2,
@@ -123,15 +158,14 @@ h3 {
 footer h3,
 footer ul > li:first-child {
   color: var(--purple);
+  font-weight: 600;
 }
+
+/*OTHER*/
 
 p {
   font-size: var(--fs-medium);
   line-height: 32px;
-}
-
-select option {
-  font-size: var(--fs-small);
 }
 
 header .row,
@@ -139,15 +173,9 @@ nav a {
   color: white;
 }
 
-.text-purple {
-  color: var(--purple);
-}
+/*-------------- 4. LAYOUT  --------------*/
 
-.text-center {
-  text-align: center;
-}
-
-/**/
+/* >> A: HEADER >> */
 
 header {
   background-image: url("../img/jumbo.png");
@@ -155,29 +183,23 @@ header {
   background-position: center;
 }
 
-.row {
-  width: 65%;
-  margin: auto;
+header img,
+main img {
+  width: 100%;
 }
-
-/* >> A: HEADER >> */
 
 /*NAV*/
 
-header .row {
+header .container {
   position: relative;
 }
 
 header nav {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 30px 0;
-}
-
-header nav > * {
-  float: left;
 }
 
 .nav-ul li {
@@ -194,10 +216,10 @@ nav > div:last-of-type {
   text-align: right;
 }
 
-/*HEADER SECTION*/
+/*SECTION*/
 
 header section {
-  width: 70%;
+  width: 75%;
   padding: var(--section-spacing) 0;
   margin: auto;
 }
@@ -206,7 +228,7 @@ header section {
   margin: 0 10px;
 }
 
-/* >> A: MAIN >> */
+/* >> B: MAIN >> */
 
 main .row {
   padding: var(--section-spacing) 0;
@@ -224,10 +246,11 @@ main .row {
   transform: translateX(-50%);
 }
 
-/* >> A: FOOTER >> */
+/* >> C: FOOTER >> */
+
+/*SITE MAP*/
 
 .language img {
-  width: auto;
   height: 20px;
   vertical-align: middle;
 }
@@ -242,19 +265,28 @@ footer h3 {
   width: 70%;
 }
 
+footer .social a {
+  margin: 20px 20px 20px 0;
+  font-size: var(--fs-medium);
+  color: white;
+}
+
 footer ul {
   padding: 10px 0 32px;
 }
 
+/*NAV*/
+
 footer nav {
+  position: relative;
   border-top: 1px solid #3f4a69;
   padding: 30px 0;
 }
 
-.booo {
+footer nav .row-1_6 {
   float: left;
 }
 
-/* footer .row1_6 {
+footer nav .row-1_6:last-child {
   float: right;
-} */
+}
