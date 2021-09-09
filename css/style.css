@@ -234,14 +234,25 @@ main .row {
   padding: var(--section-spacing) 0;
 }
 
+.wave-top {
+  position: relative;
+  top: 10px;
+}
+
+.wave-bottom {
+  position: relative;
+  top: -10px;
+  transform: rotateZ(180deg);
+}
+
 .call-to-action {
   position: relative;
 }
 
 .stars {
-  width: 60%;
+  width: 70%;
   position: absolute;
-  top: -35px;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -289,15 +300,4 @@ footer nav .row-1_6 {
 
 footer nav .row-1_6:last-child {
   float: right;
-}
-
-.wave-top {
-  position: relative;
-  top: 10px;
-}
-
-.wave-bottom {
-  position: relative;
-  top: -10px;
-  transform: rotateZ(180deg);
 }
