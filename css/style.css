@@ -3,9 +3,10 @@ SOMMARIO:
 1. RESET
 2. UTILITY CLASSES
     - ROWS
-    - BUTTONS
-    - BACKGROUNDS
     - FLOATS
+    - BACKGROUNDS
+    - BUTTONS
+    - BUTTONS HOVER EFFECTS
     - TYPOGRAPHY
 3. TYPOGRAPHY
     - HEADINGS
@@ -71,20 +72,22 @@ a {
   width: calc(100% / 6 * 4);
 }
 
-/*BUTTONS*/
+/*FLOATS*/
 
-.btn-normal {
-  font-size: var(--fs-medium);
-  line-height: 60px;
-  padding: 0 30px;
-  border-radius: 30px;
+.float-left > * {
+  float: left;
 }
 
-.btn-small {
-  font-size: var(--fs-small);
-  line-height: 33px;
-  padding: 0 15px;
-  border-radius: 20px;
+.float-right > * {
+  float: right;
+}
+
+.float-left::after,
+.float-right::after,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*BACKGROUNDS*/
@@ -103,27 +106,45 @@ a {
   background: var(--grey);
 }
 
-.bg-light-purple {
-  background: var(--light-purple);
+.bg-purple {
+  background: var(--purple);
   color: white;
 }
 
-/*FLOATS*/
+/*BUTTONS*/
 
-.float-left > * {
-  float: left;
+.btn-normal {
+  font-size: var(--fs-medium);
+  line-height: 60px;
+  padding: 0 30px;
+  border-radius: 30px;
 }
 
-.float-right > * {
-  float: right;
+.btn-small {
+  font-size: var(--fs-small);
+  line-height: 33px;
+  padding: 0 15px;
+  border-radius: 20px;
 }
 
-.float-left::after,
-.float-right::after,
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+/*BUTTONS HOVER EFFECTS*/
+
+.btn-normal.bg-purple:hover,
+.btn-small.bg-purple:hover {
+  background: var(--light-purple);
+  box-shadow: 0 5px 10px #29284193;
+}
+
+.btn-normal.bg-white:hover,
+.btn-small.bg-white:hover {
+  color: var(--purple);
+  box-shadow: 0 5px 10px #29284193;
+}
+
+.btn-normal.bg-dark:hover,
+.btn-small.bg-dark:hover {
+  background: #33393d;
+  box-shadow: 0 5px 10px #29284193;
 }
 
 /*TYPOGRAPHY*/
@@ -169,8 +190,14 @@ p {
 }
 
 header .row,
-nav a {
+nav a,
+footer a {
   color: white;
+}
+
+nav ul a:hover,
+footer ul a:hover {
+  text-decoration: underline;
 }
 
 /*-------------- 4. LAYOUT  --------------*/
