@@ -1,3 +1,5 @@
+/*----------------- RESET -----------------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +10,8 @@
   --dark-blue: #23272a;
   --section-spacing: 120px;
   font-family: "Heebo", sans-serif;
-  --fs-medium: 16px;
-  --fs-small: 13px;
+  --fs-medium: 18px;
+  --fs-small: 15px;
 }
 
 ul {
@@ -21,13 +23,29 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+p {
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 43px;
+}
+
+p {
+  font-size: var(--fs-medium);
+  line-height: 32px;
+}
+
 header .row,
 nav a {
   color: white;
 }
 
+/**/
+
 header {
-  min-height: 547px;
   background-image: url("../img/jumbo.png");
   background-size: cover;
   background-position: center;
@@ -44,6 +62,9 @@ nav::after {
   clear: both;
 }
 
+/*A: HEADER*/
+
+/*Nav bar*/
 header nav {
   padding: 30px 0;
 }
@@ -70,6 +91,23 @@ nav > div:last-of-type {
   text-align: right;
 }
 
+/*HEADER SECTION*/
+
+header section {
+  width: 70%;
+  text-align: center;
+  padding: var(--section-spacing) 0;
+  margin: auto;
+}
+
+.hero-buttons a {
+  margin: 0 10px;
+}
+
+/*----------- CLASSI UTILITA' -----------*/
+
+/*ROWS*/
+
 .row-1_6 {
   width: calc(100% / 6);
 }
@@ -82,11 +120,13 @@ nav > div:last-of-type {
   width: calc(100% / 6 * 4);
 }
 
+/*BUTTONS*/
+
 .btn-normal {
   font-size: var(--fs-medium);
-  line-height: 50px;
+  line-height: 60px;
   padding: 0 30px;
-  border-radius: 50%;
+  border-radius: 30px;
 }
 
 .btn-small {
@@ -96,7 +136,14 @@ nav > div:last-of-type {
   border-radius: 20px;
 }
 
+/*BACKGROUNDS*/
+
 .bg-white {
   background: white;
   color: var(--dark-blue);
+}
+
+.bg-dark {
+  background: var(--dark-blue);
+  color: white;
 }
