@@ -290,3 +290,14 @@ footer nav .row-1_6 {
 footer nav .row-1_6:last-child {
   float: right;
 }
+
+.wave-top {
+  position: relative;
+  top: 10px;
+}
+
+.wave-bottom {
+  position: relative;
+  top: -10px;
+  transform: rotateZ(180deg);
+}
