@@ -8,10 +8,19 @@
 
 :root {
   --dark-blue: #23272a;
+  --grey: #f6f6f6;
+  --light-purple: #8ea1e1;
+  --purple: #7289da;
   --section-spacing: 120px;
-  font-family: "Heebo", sans-serif;
   --fs-medium: 18px;
   --fs-small: 15px;
+
+  font-family: "Heebo", sans-serif;
+  color: var(--dark-blue);
+}
+
+img {
+  width: 100%;
 }
 
 ul {
@@ -25,12 +34,26 @@ a {
 
 h1,
 h2,
+h3,
 p {
-  margin-bottom: 32px;
+  margin: 32px 0;
 }
 
 h1 {
-  font-size: 43px;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+footer h3,
+footer ul > li:first-child {
+  color: var(--purple);
 }
 
 p {
@@ -43,6 +66,14 @@ nav a {
   color: white;
 }
 
+.text-purple {
+  color: var(--purple);
+}
+
+.text-center {
+  text-align: center;
+}
+
 /**/
 
 header {
@@ -51,30 +82,29 @@ header {
   background-position: center;
 }
 
-.container {
-  width: 70%;
+.row {
+  width: 65%;
   margin: auto;
 }
 
-nav::after {
-  content: "";
-  display: table;
-  clear: both;
+/* >> A: HEADER >> */
+
+/*NAV*/
+
+header .row {
+  position: relative;
 }
 
-/*A: HEADER*/
-
-/*Nav bar*/
 header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 30px 0;
 }
 
 header nav > * {
   float: left;
-}
-
-.nav-ul {
-  text-align: center;
 }
 
 .nav-ul li {
@@ -95,13 +125,30 @@ nav > div:last-of-type {
 
 header section {
   width: 70%;
-  text-align: center;
   padding: var(--section-spacing) 0;
   margin: auto;
 }
 
 .hero-buttons a {
   margin: 0 10px;
+}
+
+/* >> A: MAIN >> */
+
+main .row {
+  padding: var(--section-spacing) 0;
+}
+
+.call-to-action {
+  position: relative;
+}
+
+.stars {
+  width: 60%;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*----------- CLASSI UTILITA' -----------*/
@@ -146,4 +193,28 @@ header section {
 .bg-dark {
   background: var(--dark-blue);
   color: white;
+}
+
+.bg-grey {
+  background: var(--grey);
+}
+
+.bg-light-purple {
+  background: var(--light-purple);
+  color: white;
+}
+
+.row.float-left > * {
+  float: left;
+}
+
+.row.float-right > * {
+  float: right;
+}
+
+.float-left::after,
+.float-right::after {
+  content: "";
+  display: table;
+  clear: both;
 }
