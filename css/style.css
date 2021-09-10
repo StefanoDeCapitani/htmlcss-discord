@@ -127,6 +127,11 @@ a {
   border-radius: 20px;
 }
 
+.btn-normal,
+.btn-small {
+  transition: all 0.3s ease-in-out;
+}
+
 /*BUTTONS HOVER EFFECTS*/
 
 .btn-normal.bg-purple:hover,
